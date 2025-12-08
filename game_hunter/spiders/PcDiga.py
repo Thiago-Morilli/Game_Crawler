@@ -2,7 +2,7 @@ import scrapy
 
 
 class GamehunterSpider(scrapy.Spider):
-    name = "Globaldata"
+    name = "PcDiga"
     domains = "https://www.pcdiga.com/"
 
     def start_requests(self):
@@ -14,3 +14,5 @@ class GamehunterSpider(scrapy.Spider):
 
     def category(self, response):
         print(response)
+
+
