@@ -1,6 +1,5 @@
 import scrapy
 
-
 class GamehunterSpider(scrapy.Spider):
     name = "PcDiga"
     domains = "https://www.pcdiga.com/"
