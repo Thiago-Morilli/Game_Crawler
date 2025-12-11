@@ -26,6 +26,17 @@ ROBOTSTXT_OBEY = True
 CONCURRENT_REQUESTS_PER_DOMAIN = 1
 DOWNLOAD_DELAY = 1
 
+TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
+
+# dizer pro Scrapy que quem baixa HTTP agora é o Playwright
+DOWNLOAD_HANDLERS = {
+    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+}
+
+# navegador padrão (pode ser 'chromium', 'firefox' ou 'webkit')
+PLAYWRIGHT_BROWSER_TYPE = "chromium"
+
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
 
